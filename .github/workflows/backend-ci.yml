@@ -24,4 +24,4 @@ jobs:
         
         - name: Build backend
           working-directory: email-writer-sb
-          run: mvn clean package -DskipTests
+          run: mvn clean package
