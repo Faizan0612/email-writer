@@ -23,5 +23,5 @@ jobs:
             distribution: 'temurin'
         
         - name: Build backend
-          working-directory: backend
+          working-directory: email-writer-sb
           run: mvn clean package -DskipTests
