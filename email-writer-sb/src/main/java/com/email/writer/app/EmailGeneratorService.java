@@ -58,7 +58,7 @@ public class EmailGeneratorService {
 
     }
 
-    private String extractResponseContent(String response) {
+    String extractResponseContent(String response) {
         try {
             ObjectMapper mapper = new ObjectMapper();
             JsonNode rootNode = mapper.readTree(response);
