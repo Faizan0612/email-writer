@@ -3,10 +3,10 @@ name: Backend CI
 on:
   push:
    paths:
-    - 'backend/**'
+    - 'email-writer-sb/**'
   pull_request:
    paths:
-    - 'backend/**' 
+    - 'email-writer-sb/**' 
 
 jobs:
     build:
