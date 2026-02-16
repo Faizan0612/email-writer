@@ -39,7 +39,7 @@ class EmailGeneratorServiceTest {
     void shouldExtractEmailTextFromGeminiResponse() {
 
          // Setup mock chain
-        when(webClientBuilder.build()).thenReturn(webClient);
+        // when(webClientBuilder.build()).thenReturn(webClient);
 
         String geminiResponse = """
         {
