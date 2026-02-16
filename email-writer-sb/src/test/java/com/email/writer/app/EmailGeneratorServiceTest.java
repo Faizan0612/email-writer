@@ -14,8 +14,8 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class EmailGeneratorServiceTest {
 
-    // @Mock
-    // private WebClient.Builder webClientBuilder;
+    @Mock
+    private WebClient.Builder webClientBuilder;
 
     @Mock
     private WebClient webClient;
