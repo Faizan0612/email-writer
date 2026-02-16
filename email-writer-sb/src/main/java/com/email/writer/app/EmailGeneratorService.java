@@ -31,6 +31,7 @@ public class EmailGeneratorService {
         String prompt = buildPrompt(emailRequest);
 
         //Craft a request   request contains "contents"
+        System.out.println("Hi Devops ") ;
         Map<String, Object> requestBody = Map.of(
             "contents" , List.of(
                 Map.of(

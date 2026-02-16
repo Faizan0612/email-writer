@@ -12,6 +12,10 @@ jobs:
     build:
         runs-on: ubuntu-latest
 
+        env:
+          GEMINI_URL: ${{ secrets.GEMINI_URL }}
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+
         steps: 
         - name: Checkout code
           uses: actions/checkout@v4
@@ -19,9 +23,9 @@ jobs:
         - name: Set up Java
           uses: actions/setup-java@v4   
           with:
-            java-version: '17'
+            java-version: '21'
             distribution: 'temurin'
         
         - name: Build backend
-          working-directory: backend
-          run: mvn clean package -DskipTests
+          working-directory: email-writer-sb
+          run: mvn clean package

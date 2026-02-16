@@ -9,27 +9,37 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class EmailGeneratorServiceTest {
 
     @Mock
+    private WebClient.Builder webClientBuilder;
+
+    @Mock
     private WebClient webClient;
 
-    @Mock
-    private WebClient.RequestBodyUriSpec requestBodyUriSpec;
+    // @Mock
+    // private WebClient.RequestBodyUriSpec requestBodyUriSpec;
 
-    @Mock
-    private WebClient.RequestHeadersSpec<?> requestHeadersSpec;
+    // @Mock
+    // private WebClient.RequestHeadersSpec<?> requestHeadersSpec;
 
-    @Mock
-    private WebClient.ResponseSpec responseSpec;
+    // @Mock
+    // private WebClient.ResponseSpec responseSpec;
 
     @InjectMocks
     private EmailGeneratorService emailGeneratorService;
 
+    // public EmailGeneratorServiceTest() {
+    // }
+
     @Test
     void shouldExtractEmailTextFromGeminiResponse() {
+
+         // Setup mock chain
+        // when(webClientBuilder.build()).thenReturn(webClient);
 
         String geminiResponse = """
         {
@@ -46,15 +56,15 @@ class EmailGeneratorServiceTest {
         """;
 
         String result = emailGeneratorService.extractResponseContent(geminiResponse);
-
-//        String result = emailGeneratorService.generateEmailReply(emailRequest);
-//        assertEquals("This is a professional reply.", result);
-
         assertEquals("This is a professional reply.", result);
     }
 
     @Test
     void shouldBuildPromptCorrectly() {
+
+       // Setup mock chain
+        // when(webClientBuilder.build()).thenReturn(webClient);
+
         EmailRequest request = new EmailRequest();
         request.setEmailContent("Please approve leave");
         request.setTone("formal");
