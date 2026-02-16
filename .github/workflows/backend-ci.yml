@@ -12,6 +12,10 @@ jobs:
     build:
         runs-on: ubuntu-latest
 
+        env:
+          GEMINI_URL: ${{ secrets.GEMINI_URL }}
+          GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+
         steps: 
         - name: Checkout code
           uses: actions/checkout@v4
